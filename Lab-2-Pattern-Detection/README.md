@@ -1,5 +1,4 @@
-SOC Lab 2 — Pattern Detection (Easy Mode)
-
+# Pattern Detection 
 Objective
 ---------
 Analyze web server logs to identify suspicious behavior such as:
