@@ -1,0 +1,42 @@
+SOC Lab 2 — Steps Performed
+
+1. Created the log file
+
+Command:
+nano lab2_access.log
+
+---
+
+2. Viewed the log file
+
+Command:
+cat lab2_access.log
+
+---
+
+3. Counted IP activity
+
+Command:
+awk '{print $1}' lab2_access.log | sort | uniq -c | sort -nr
+
+---
+
+4. Identified failed login attempts
+
+Command:
+grep "401" lab2_access.log
+
+---
+
+5. Identified scanning behavior
+
+Command:
+grep "404" lab2_access.log
+
+---
+
+6. Investigated suspicious IPs
+
+Commands:
+grep "192.168.1.50" lab2_access.log
+grep "192.168.1.77" lab2_access.log
