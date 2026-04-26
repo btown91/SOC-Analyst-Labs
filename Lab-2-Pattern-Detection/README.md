@@ -18,6 +18,65 @@ The log file contains:
     401 → Unauthorized (login failure)
     404 → Page not found
 
+Steps Performed
+---------------
+
+1. Created the log file
+
+Command:
+nano lab2_access.log
+
+Purpose:
+Created a sample log file to simulate web server traffic for analysis.
+
+
+2. Viewed the log file
+
+Command:
+cat lab2_access.log
+
+Purpose:
+Reviewed all entries to understand the structure and data before filtering.
+
+
+3. Counted IP activity
+
+Command:
+awk '{print $1}' lab2_access.log | sort | uniq -c | sort -nr
+
+Purpose:
+Extracted IP addresses, counted occurrences, and identified the most active IPs.
+
+
+4. Identified failed login attempts
+
+Command:
+grep "401" lab2_access.log
+
+Purpose:
+Filtered for HTTP 401 responses to detect repeated login failures.
+
+
+5. Identified scanning behavior
+
+Command:
+grep "404" lab2_access.log
+
+Purpose:
+Filtered for HTTP 404 responses to detect requests to non-existent pages.
+
+
+6. Investigated specific IPs
+
+Commands:
+grep "192.168.1.50" lab2_access.log
+grep "192.168.1.77" lab2_access.log
+
+Purpose:
+Isolated activity from each suspicious IP to compare behavior and determine intent.
+
+
+
 
 Analysis Performed
 ------------------
