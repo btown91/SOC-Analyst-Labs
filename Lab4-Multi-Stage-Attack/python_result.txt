@@ -1,0 +1,18 @@
+=== Failed Login Attempts ===
+192.168.1.50 had 3 failed login attempts
+
+=== Successful Logins ===
+192.168.1.50 successfully logged in
+
+=== Recon Activity ===
+192.168.1.77 accessed invalid paths:
+  - /admin
+  - /admin/login
+  - /secret
+  - /hidden
+
+=== Sensitive Endpoint Access ===
+192.168.1.50 accessed sensitive endpoints:
+  - /dashboard
+  - /admin/panel
+  - /config
